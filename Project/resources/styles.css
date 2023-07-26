@@ -2,12 +2,11 @@
  :root{
      --main-color : #131313;
      --second-color : #4b96f9;
-     --body-color : #f0eeee;
+     --body-color : #ffffff;
      --main-font: 'Helvetica', sans-serif;
      --heading-font : 'Helvetica', sans-serif;
      --bonus-font : 'Dancing Script', cursive;
 }
-
 
  *{
      margin: 0;
@@ -44,6 +43,7 @@
  .badan {
      display: flex;
      justify-content: center;
+     max-height: max-content;
 }
  .main-wrapper {
      padding: 20px;
@@ -52,7 +52,7 @@
      align-items: center;
      background-color: var(--body-color);
      border-radius: 25px;
-     min-width: 900px;
+     min-width: 500px;
      gap: 20px;
 }
  .main-wrapper .teks {
@@ -62,13 +62,10 @@
      align-items: center;
      text-align: center;
 }
-/* .badankiri {
-     padding-right: 800px;
+.badankiri {
+    padding-right: 20px;
 }
- .badankanan {
-     padding-left: 180px;
-}
- */
+
  .navbar .nav-wrapper{
      position: relative;
      display: flex;
@@ -217,6 +214,13 @@
      position: absolute;
      top: 0;
 }
+
+@media screen and (max-width: 450px) {
+    .prev, .next {
+        font-size: 9px;
+   }
+}
+
 /* Galeri */
  #galeri{
      display: flex;
@@ -238,21 +242,38 @@
      width: 100%;
 }
 
+@media screen and (max-width: 1000px){
+    #galeri {
+        display: block;
+    }
+}
+
 /* Sidebar */
 
  .sidenav {
-     width: 150px;
-     z-index: 1;
      background: var(--body-color);
      border-radius: 20px;
-     padding: 20px 5px 10px 10px;
 }
+
+.sidenav-wrapper {
+    width: auto;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sidenav .books {
+    margin-bottom: 20px;
+}
+
  .sidenav a {
-     padding: 6px 8px 6px 16px;
+    text-align: left;
+     padding: 6px 8px 6px 8px;
      text-decoration: none;
-     font-size: 25px;
+     font-size: 1.2em;
      color: var(--main-color);
-     display: block;
 }
  .sidenav a:hover {
      color: var(--second-color);
@@ -264,6 +285,16 @@
      .sidenav a {
         font-size: 18px;
     }
+}
+
+.sidenav .lagu {
+    margin-top: 20px;
+}
+
+.sidenav img {
+    
+    width: 50px;
+    height: 50px;
 }
 
 /* Rapper */

@@ -1,11 +1,11 @@
 function dropdown() {
-  var x = document.getElementById("dropdown-content");
+  var x = document.getElementById("aselole");
   if (x.style.display === "none") {
-    x.style.display = "block";
+      x.style.display = "block";
   } else {
-    x.style.display = "none";
+      x.style.display = "none";
   } 
-}
+  }
 
 let rapperList = [];
 let currentRapperIndex = 0;
