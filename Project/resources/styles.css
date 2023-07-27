@@ -8,6 +8,10 @@
      --bonus-font : 'Dancing Script', cursive;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
  *{
      margin: 0;
      padding: 0;
@@ -53,6 +57,7 @@
      background-color: var(--body-color);
      border-radius: 25px;
      min-width: 500px;
+     max-width: 800px;
      gap: 20px;
 }
  .main-wrapper .teks {
@@ -105,22 +110,33 @@
      font-size: 1.25rem;
      color: var(--main-color);
 }
- img {
-     overflow-clip-margin: content-box;
-     overflow: clip;
-     vertical-align: middle;
-}
  #dode {
      display: flex;
      align-items: center;
+     gap: 10px;
 }
  #dode img {
      float:left;
      margin:0 5px 0 0 
 }
  #dode:hover img{
-     rotate: 360deg; 
+     rotate: 120deg; 
      transition: .5s ease-in-out;
+}
+
+#dode p {
+    transition: .5 ease;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+#dode:hover p {
+    transition: .5s ease;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+
+#dode:hover::after p{
+    transition: .5 ease;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 
 /* Dropdown */
@@ -129,6 +145,10 @@
      float: left;
      overflow: hidden;
 }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
 
  .dropdown .dropbtn {
      font-size: 16px;
@@ -215,11 +235,6 @@
      top: 0;
 }
 
-@media screen and (max-width: 450px) {
-    .prev, .next {
-        font-size: 9px;
-   }
-}
 
 /* Galeri */
  #galeri{
@@ -242,17 +257,15 @@
      width: 100%;
 }
 
-@media screen and (max-width: 1000px){
-    #galeri {
-        display: block;
-    }
-}
+
 
 /* Sidebar */
 
  .sidenav {
      background: var(--body-color);
      border-radius: 20px;
+    min-width: 300px;
+    max-width: 400px;
 }
 
 .sidenav-wrapper {
@@ -261,30 +274,33 @@
     padding: 30px;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
 
 .sidenav .books {
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidenav .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
  .sidenav a {
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
      padding: 6px 8px 6px 8px;
      text-decoration: none;
-     font-size: 1.2em;
+     font-size: 1em;
      color: var(--main-color);
 }
+
+
  .sidenav a:hover {
      color: var(--second-color);
-}
- @media screen and (max-height: 450px) {
-     .sidenav {
-        padding-top: 15px;
-    }
-     .sidenav a {
-        font-size: 18px;
-    }
 }
 
 .sidenav .lagu {
@@ -293,8 +309,49 @@
 
 .sidenav img {
     
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+}
+
+.sidenav .tulisan {
+    text-align: right;
+}
+
+
+
+/* Sidenav : Timeline */
+
+.kotakachievement {
+    margin-top: 20px;
+}
+
+.achievements {
+    display: flex;
+    align-items: baseline;
+    left: 0;
+    gap: 20px;
+    border-bottom: 2px dashed var(--main-color);
+    margin: 5px;
+    padding: 5px;
+}
+.achievements h2 {
+    font-size: xx-large;
+}
+
+#last {
+    border-bottom: 2px dashed var(--body-color);
+}
+
+.achievements .desc {
+    line-height: normal;
+}
+
+.date {
+    display: inline-block;
+}
+.desc {
+    display: inline-block;
+    text-align: justify;
 }
 
 /* Rapper */
@@ -356,4 +413,25 @@
      display: inline-block;
      font-size: 16px;
      border-radius: 25px;
+}
+
+@media screen and (max-width: 450px) {
+    .prev, .next {
+        font-size: 9px;
+   }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+       padding-top: 15px;
+   }
+    .sidenav a {
+       font-size: 18px;
+   }
+}
+
+@media screen and (max-width: 1000px){
+    #galeri {
+        display: block;
+    }
 }
