@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="resources/styles.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(function(){ 
+                $('#header').load('header.html');
+                $('#footer').load('footer.html');
+            });
+
+            $("#balon").on("click", function() {
+                    $("#balon").animate({
+                        width: '+=5%',
+                        height: '+=5%'
+                    }, {
+                        step: function(now, fx) {
+                            if (now >= 90) {
+                                $(this).stop();
+                            }
+                    }});
+                });
+
+                $("#dor").on("click", function() {
+                    $("#dor").animate({
+                        width: '+=5%',
+                        height: '+=5%'
+                    }, {
+                        step: function(now, fx) {
+                            if (now >= 90) {
+                                $(this).stop();
+                            }
+                    }});
+                });
+
+            $(document).ready(function() {
+                $("img").on("click", function() {
+                    $("#balon").add("#dor").trigger("click");
+                });
+            });
+         </script>
+        <style>
+            .navbar {
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header"></header>
+        <div class="wrapper">
+            <div class="container main-wrapper" id="balongame">
+                <img src="images/balloon.webp" alt="Balon Merah" id="balon">
+                <img src="images/dor.jpg" alt="dor" id="dor">
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </body>
+</html>
