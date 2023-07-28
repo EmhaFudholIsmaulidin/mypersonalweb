@@ -46,3 +46,9 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
 }
+
+$(document).ready(function() {
+  $(".btt").click(function() {
+      $(document).scrollTop(0);
+  });
+});
