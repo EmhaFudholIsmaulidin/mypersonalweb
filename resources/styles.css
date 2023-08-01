@@ -40,7 +40,7 @@ section {
 }
 
 .wrapper {
-	min-height: 800px;
+	min-height: 900px;
 }
 
 /* Badan */
@@ -71,7 +71,6 @@ body {
 	background-color: var(--body-color);
 	border-radius: 25px;
 	min-width: 500px;
-	max-width: 800px;
 	gap: 20px;
 }
 
@@ -237,8 +236,10 @@ header .nav-wrapper {
 
 .teks-polaroid {
 	font-family: var(--bonus-font);
+	font-size: 1.7rem;
 	text-align: center;
 	padding: 5px;
+	margin: 20px 0;
 }
 
 /* Slider */
