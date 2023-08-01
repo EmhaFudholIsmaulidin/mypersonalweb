@@ -141,7 +141,7 @@ header .nav-wrapper {
 
 #dode svg {
 	float: left;
-	margin: 0 5px 0 0
+	margin: 0 5px 0 0;
 }
 
 #dode:hover svg {
@@ -149,8 +149,13 @@ header .nav-wrapper {
 	transition: .5s ease-in-out;
 }
 
+#dode:hover img {
+	rotate: 120deg;
+	transition: .5s ease-in-out;
+}
+
 #dode p {
-	transition: .5 ease;
+	transition: .5s ease;
 	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 
@@ -212,16 +217,17 @@ header .nav-wrapper {
 	box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
 	margin-bottom: 25px;
 	margin: auto;
-	transition: 0.5 ease-in-out;
+	transition: 0.5s ease-in-out;
 }
 
 .polaroid:hover {
 	rotate: 0deg;
-	transition: 0.5 ease-in-out;
+	transition: 0.5s ease-in-out;
 }
 
 .polaroid2 {
 	rotate: -3deg;
+	transition: 0.5s ease-in-out;
 }
 
 .polaroid img,
