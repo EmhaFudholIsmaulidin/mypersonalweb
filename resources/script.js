@@ -1,16 +1,5 @@
 let rapperList = [
-  "https://open.spotify.com/embed/track/18ohWhzbMCynq5QJ68ifkW?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/3WQlJpaUUbGtUqAskvGA7c?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/1ofhfV90EnYhEr7Un2fWiv?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/59FmZW6HnYFBm9echN4oPG?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/7fHoIcqmjrcpPYvv1iaZk1?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/1ZHYJ2Wwgxes4m8Ba88PeK?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/1eLU27PPFxBhbp1CBjPh9J?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/1Z7C8ClE8UEaH70jCCeJH2?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/5sJGv54fLig0JCNp5MS69R?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/1j8bp1BNjMxUJV7nLkSUrb?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/3llSXHFVAnXcGAomKuI7KP?utm_source=generator&theme=0",
-  "https://open.spotify.com/embed/track/3tC8SJpOwJhDg8WGG1NKGR?utm_source=generator&theme=0"
+    "http://api.alquran.cloud/v1/ayah/262"
 ];
 let currentRapperIndex = 0;
 
@@ -24,6 +13,17 @@ function iterateSong() {
 
   currentRapperIndex++;
 }
+
+var settings = {
+  "url": "http://api.alquran.cloud/v1/ayah/262/en.asad",
+  "method": "GET",
+  "timeout": 0,
+};
+
+$.ajax(settings).done(function (response) {
+  const juz = response.data.juz;
+  console.log(juz)
+});
 
 let slideIndex = 1;
 showSlides(slideIndex);
