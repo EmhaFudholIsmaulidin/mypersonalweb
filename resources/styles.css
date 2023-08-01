@@ -52,6 +52,7 @@ body {
 	line-height: 1.75em;
 	background: #E0DCDC url(../images/back.webp) repeat top left;
 	margin: auto;
+	animation: transitionIn 0.7s;
 }
 
 .badan {
@@ -75,14 +76,25 @@ body {
 }
 
 .main-wrapper .teks {
-	margin: 50px;
+	margin: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
 }
 
-#header .nav-wrapper {
+/* Header */
+
+header p {
+	color: var(--body-color);
+}
+
+header {
+	background-image: linear-gradient(rgb(57, 57, 57), var(--main-color));
+	padding: 0 3vh;
+}
+
+header .nav-wrapper {
 	position: relative;
 	display: flex;
 	margin: auto;
@@ -91,21 +103,20 @@ body {
 	height: 150px;
 }
 
-#header img {
-	height: 80px;
-	margin: 15px;
-}
-
-#header .nav-wrapper {
+header .nav-wrapper {
 	position: relative;
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 150px;
+	gap: 30px;
 }
 
 .nav-wrapper .logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
 	font-size: 1.9rem;
 	font-weight: 700;
 	font-family: var(--heading-font);
@@ -119,27 +130,21 @@ body {
 
 .nav-wrapper .menu-wrapper .menu {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	gap: 70px;
 }
 
 .menu-wrapper .menu .menu-link {
 	font-size: 1.25rem;
-	color: var(--main-color);
+	color: var(--body-color);
 }
 
-#dode {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-}
-
-#dode img {
+#dode svg {
 	float: left;
 	margin: 0 5px 0 0
 }
 
-#dode:hover img {
+#dode:hover svg {
 	rotate: 120deg;
 	transition: .5s ease-in-out;
 }
@@ -154,9 +159,8 @@ body {
 	clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 }
 
-#dode:hover::after p {
-	transition: .5 ease;
-	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+.sidemenu {
+	display: none;
 }
 
 /* Dropdown */
@@ -168,13 +172,12 @@ body {
 .dropbtn {
 	float: left;
 	overflow: hidden;
-	font-size: 16px;
 	border: none;
 	outline: none;
-	color: var(--main-color);
-	padding: 14px 16px;
+	color: var(--body-color);
 	background-color: inherit;
 	font-family: inherit;
+	font-size: 1.25rem;
 	margin: 0;
 }
 
@@ -184,7 +187,7 @@ body {
 	background-color: var(--body-color);
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
+
 }
 
 .dropdown-content a {
@@ -209,17 +212,12 @@ body {
 	box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
 	margin-bottom: 25px;
 	margin: auto;
+	transition: 0.5 ease-in-out;
 }
 
-.polaroid2 {
-	rotate: 3deg;
-	padding: 10px 10px 0px 10px;
-	min-width: 20%;
-	max-width: 40%;
-	background-color: rgb(255, 255, 255);
-	box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
-	margin-bottom: 25px;
-	margin: auto;
+.polaroid:hover {
+	rotate: 0deg;
+	transition: 0.5 ease-in-out;
 }
 
 .polaroid2 {
@@ -301,7 +299,6 @@ body {
 	vertical-align: middle;
 	width: 100%;
 }
-
 
 /* Sidebar */
 
@@ -405,12 +402,12 @@ body {
 /* Footer */
 
 footer {
-	background-image: linear-gradient(rgb(57, 57, 57), rgb(32, 32, 32));
+	background-image: linear-gradient(rgb(57, 57, 57), var(--main-color));
 	margin-top: 50px;
 }
 
 .footer {
-	padding: 20px;
+	padding: 2vh;
 	margin: auto;
 	gap: 20px;
 }
@@ -479,11 +476,68 @@ footer {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
 	#galeri {
 		display: block;
 	}
+	.badan {
+		display: flex;
+	}
+	.badankiri {
+		padding: 20px
+	}
+	#dode-logo {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	.nav-wrapper .menu-wrapper {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		padding: 20px;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		transition: 0.2s;
+		background-color: var(--body-color);
+	}
+
+	.nav-wrapper .menu-wrapper.active {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		transition: 0.2s;
+	}
+	
+	.nav-wrapper .menu-wrapper .menu {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.menu li {
+		background-color: #4b96f9;
+	}
+	.sidemenu {
+		display: block;
+	}
 }
+
+@keyframes transitionIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	50% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+/* Modal */
+
+
 
 /* Game Pompa Ban */
 
@@ -505,4 +559,5 @@ footer {
     font-size: 20px;
     line-height: 50px;
 	cursor: pointer;
+	/* transition: .6s ease opacity,.6s ease transform; */
 }
