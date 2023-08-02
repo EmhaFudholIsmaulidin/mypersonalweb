@@ -59,8 +59,17 @@ body {
 	display: flex;
 	justify-content: center;
 	max-height: max-content;
-    gap: 50px;
-    margin-bottom: 50px;
+	flex-direction: column;
+	padding: 20px;
+	gap: 0px;
+}
+
+.badankanan .container {
+	max-width: 1200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
 }
 
 .main-wrapper {
@@ -72,6 +81,14 @@ body {
 	border-radius: 25px;
 	min-width: 500px;
 	gap: 20px;
+}
+
+.side-wrapper {
+	margin: auto;
+	display: flex;
+	align-items: center;
+	min-width: 400px;
+	gap: 50px;
 }
 
 .main-wrapper .teks {
@@ -289,6 +306,10 @@ header .nav-wrapper {
 	align-items: center;
 }
 
+#galeri * {
+	transition: 0.3s ease;
+}
+
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -305,6 +326,7 @@ header .nav-wrapper {
 	margin-top: 8px;
 	vertical-align: middle;
 	width: 100%;
+	filter: grayscale(100%)blur(1px);
 }
 
 /* Sidebar */
@@ -312,11 +334,7 @@ header .nav-wrapper {
 .side {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-    width: auto;
-	height: auto;
-    min-width: 300px;
-	max-width: 350px;
+    min-width: 200px;
 }
 
 .sidenav {
@@ -380,7 +398,7 @@ header .nav-wrapper {
 	font-size: xx-large;
 }
 
-#last {
+.achievements:nth-last-child(1) {
 	border-bottom: 2px dashed var(--body-color);
 }
 
@@ -414,7 +432,6 @@ footer {
 }
 
 .footer {
-	padding: 2vh;
 	margin: auto;
 	gap: 20px;
 }
@@ -422,7 +439,6 @@ footer {
 .footer .informasi {
 	display: flex;
 	justify-content: space-between;
-	padding: 20px;
 	gap: 20px;
 }
 
@@ -487,12 +503,7 @@ footer {
 	#galeri {
 		display: block;
 	}
-	.badan {
-		display: flex;
-	}
-	.badankiri {
-		padding: 20px
-	}
+
 	#dode-logo {
 		position: fixed;
 		top: 0;

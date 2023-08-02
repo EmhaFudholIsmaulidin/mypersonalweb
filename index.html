@@ -9,8 +9,9 @@
       <link rel="icon" type="image/x-icon" href="images/logo.ico">
       <link rel="stylesheet" type="text/css" href="resources/styles.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
       <script>
          $(function(){ 
             $('#header').load('header.html');
@@ -90,26 +91,27 @@
                         </div>
                      </div>
                      <div class="row">
-                        <div class="column">
+                        <div class="column" id="col1">
                            <img src="images/galeri/2.webp" style="width:100%" loading="lazy" alt="Lakeside">
                            <img src="images/galeri/4.webp" style="width:100%" loading="lazy" alt="Flower">
                            <img src="images/galeri/8.webp" style="width:100%" loading="lazy" alt="Me and Mom">
                         </div>
-                        <div class="column">
+                        <div class="column" id="col2">
                            <img src="images/galeri/6.webp" style="width:100%" loading="lazy" alt="Mom Driving">
                            <img src="images/galeri/1.webp" style="width:100%" loading="lazy" alt="Forensics Medal">
                            <img src="images/galeri/7.webp" style="width:100%" loading="lazy" alt="Sculpture">
                         </div>
-                        <div class="column">
+                        <div class="column" id="col3">
                            <img src="images/galeri/9.webp" style="width:100%" loading="lazy" alt="The Innocent Men">
                            <img src="images/galeri/10.webp" style="width:100%" loading="lazy" alt="Caleb Heiberger">
                            <img src="images/galeri/11.webp" style="width:100%" loading="lazy" alt="Mom and Lilly">
                         </div>
                      </div>
+                     
                   </div>
                   <!-- <div id="myModal" class="modal">
                      <i class="fa fa-times" aria-hidden="true">
-
+                        
                      </i>
                      <img class="modal-content" id="img01">
                      <div id="caption"></div>
@@ -117,133 +119,146 @@
                </section>
                <section class="rapper" id="rapper">
                   <div class="container main-wrapper" id="rapperContent">
-                     <iframe id="embedSpotify" style="border-radius:12px" src="https://open.spotify.com/embed/track/6YQ7aPJhk0MGpwoKfFAEbS?utm_source=generator&theme=0" width="90%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                     <button onclick="iterateSong()" class="tombol">Change My Favorite Rapper</button>
+                     <div class="quran" id="quran">
+                        <h1>aas</h1>
+                        <p>asdasd</p>
+                     </div>
+                     <button class="tombol">I want to change.</button>
                   </div>
                </section>
             </div>
-            <!-- <div class="badankanan">
-               <section class="sidenav">
-                  <div class="side main-wrapper">
-                     <h2 class="books">
-                        Personal Reading
-                     </h2>
-                     <div class="links">
-                        <a href="https://www.goodreads.com/book/show/13517562-cantik-itu-luka">
-                           <img src="images/b6.webp" alt="Cantik Itu Luka">
-                           <div class="tulisan">Cantik Itu Luka</div>
-                        </a>
-                        <a href="https://www.goodreads.com/book/show/52578297-the-midnight-library?ref=nav_sb_ss_1_20">
-                           <img src="images/b5.webp" alt="The Midnight Library">
-                           <div class="tulisan">The Midnight Library</div>
-                        </a>
-                        <a href="https://www.goodreads.com/book/show/128029.A_Thousand_Splendid_Suns?ref=nav_sb_ss_1_24">
-                           <img src="images/b2.webp" alt="A Thousand Splendid Suns">
-                           <div class="tulisan">A Thousand Splendid Suns</div>
-                        </a>
-                        <a href="https://www.goodreads.com/book/show/18144590-the-alchemist?ref=nav_sb_ss_1_13">
-                           <img src="images/b4.webp" alt="The Alchemist">
-                           <div class="tulisan">The Alchemist</div>
-                        </a>
-                        <a href="https://www.goodreads.com/book/show/42861019-filosofi-teras?from_search=true&from_srp=true&qid=suRz4sdq21&rank=1">
-                           <img src="images/b3.webp" alt="Filosofi Teras">
-                           <div class="tulisan">Filosofi Teras</div>
-                        </a>
-                        <a href="https://www.goodreads.com/book/show/6900.Tuesdays_with_Morrie?from_search=true&from_srp=true&qid=dqgPvguvB7&rank=2">
-                           <img src="images/b1.webp" alt="Tuesdays With Morrie">
-                           <div class="tulisan">Tuesdays With Morrie</div>
-                        </a>
-                     </div>
-                  </div>
-               </section>
-               <section class="sidenav">
-                  <div class="side main-wrapper">
-                     <h1>Achievement Timeline</h1>
-                     <div class="kotakachievement">
-                        <div class="achievements">
-                           <div class="date">
-                              <h2>2001.</h2>
-                           </div>
-                           <div class="desc">
-                              Saya lahir. 
-                           </div>
-                        </div>
-                        <div class="achievements">
-                           <div class="date">
-                              <h2>2004.</h2>
-                           </div>
-                           <div class="desc">
-                              Saya belajar Bahasa Inggris.
-                           </div>
-                        </div>
-                        <div class="achievements">
-                           <div class="date">
-                              <h2>2013.</h2>
-                           </div>
-                           <div class="desc">
-                              Saya mengenal cinta.
-                           </div>
-                        </div>
-                        <div class="achievements">
-                           <div class="date">
-                              <h2>2007.</h2>
-                           </div>
-                           <div class="desc">
-                              Saya masuk SD dan mengenal cinta.
-                           </div>
-                        </div>
-                        <div class="achievements">
-                           <div class="date">
-                              <h2>2012.</h2>
-                           </div>
-                           <div class="desc">
-                              Saya mulai dirundung oleh teman sekelas.
-                           </div>
-                        </div>
-                        <div class="achievements">
-                           <div class="date">
-                              <h2>2015.</h2>
-                           </div>
-                           <div class="desc">
-                              Saya pindah rumah ke kampung ibu.
-                           </div>
-                        </div>
-                        <div class="achievements">
-                           <div class="date">
-                              <h2>2016.</h2>
-                           </div>
-                           <div class="desc">
-                              Saya mulai menaiki tangga kehidupan sosial dengan cara berkomunitas.
-                           </div>
-                        </div>
-                        <div class="achievements">
-                           <div class="date">
-                              <h2>2017.</h2>
-                           </div>
-                           <div class="desc">
-                              Saya aktif mengikuti lomba.
-                           </div>
-                        </div>
-                        <div class="achievements" id="last">
-                           <div class="date">
-                              <h2>2023.</h2>
-                           </div>
-                           <div class="desc">
-                              Saya menjelajahi Sulawesi Selatan.
-                           </div>
+            <div class="badankanan">
+               <div class="container side-wrapper">
+                  <section class="sidenav">
+                     <div class="side main-wrapper">
+                        <h2 class="books">
+                           Personal Reading
+                        </h2>
+                        <div class="links">
+                           <a href="https://www.goodreads.com/book/show/13517562-cantik-itu-luka">
+                              <img src="images/b6.webp" alt="Cantik Itu Luka">
+                              <div class="tulisan">Cantik Itu Luka</div>
+                           </a>
+                           <a href="https://www.goodreads.com/book/show/52578297-the-midnight-library?ref=nav_sb_ss_1_20">
+                              <img src="images/b5.webp" alt="The Midnight Library">
+                              <div class="tulisan">The Midnight Library</div>
+                           </a>
+                           <a href="https://www.goodreads.com/book/show/128029.A_Thousand_Splendid_Suns?ref=nav_sb_ss_1_24">
+                              <img src="images/b2.webp" alt="A Thousand Splendid Suns">
+                              <div class="tulisan">A Thousand Splendid Suns</div>
+                           </a>
+                           <a href="https://www.goodreads.com/book/show/18144590-the-alchemist?ref=nav_sb_ss_1_13">
+                              <img src="images/b4.webp" alt="The Alchemist">
+                              <div class="tulisan">The Alchemist</div>
+                           </a>
+                           <a href="https://www.goodreads.com/book/show/42861019-filosofi-teras?from_search=true&from_srp=true&qid=suRz4sdq21&rank=1">
+                              <img src="images/b3.webp" alt="Filosofi Teras">
+                              <div class="tulisan">Filosofi Teras</div>
+                           </a>
+                           <a href="https://www.goodreads.com/book/show/6900.Tuesdays_with_Morrie?from_search=true&from_srp=true&qid=dqgPvguvB7&rank=2">
+                              <img src="images/b1.webp" alt="Tuesdays With Morrie">
+                              <div class="tulisan">Tuesdays With Morrie</div>
+                           </a>
                         </div>
                      </div>
-                  </div>
-               </section>
-               <section class="sidenav">
-                  <div class="side main-wrapper">
-                     <h1>Games</h1>
-                     <div class="kotakgames">
-                        <a href="pompa.html" class="pompaBan">Game Pompa Ban</a>
+                  </section>
+                  <section class="sidenav">
+                     <div class="side main-wrapper">
+                        <h1>Achievement Timeline</h1>
+                        <div class="kotakachievement">
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2001.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya lahir. 
+                              </div>
+                           </div>
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2004.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya belajar Bahasa Inggris.
+                              </div>
+                           </div>
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2007.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya masuk SD dan mengenal cinta.
+                              </div>
+                           </div>
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2012.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya mulai dirundung oleh teman sekelas.
+                              </div>
+                           </div>
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2015.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya pindah rumah ke kampung ibu.
+                              </div>
+                           </div>
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2016.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya mulai menaiki tangga kehidupan sosial dengan cara berkomunitas.
+                              </div>
+                           </div>
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2017.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya aktif mengikuti lomba.
+                              </div>
+                           </div>
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2018.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya berangkat ke AS.
+                              </div>
+                           </div>
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2020.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya kuliah.
+                              </div>
+                           </div>
+                           <div class="achievements">
+                              <div class="date">
+                                 <h2>2023.</h2>
+                              </div>
+                              <div class="desc">
+                                 Saya menjelajahi Sulawesi Selatan.
+                              </div>
+                           </div>
+                        </div>
                      </div>
-                  </div>
-               </section>
-            </div> -->
+                  </section>
+                  <section class="sidenav">
+                     <div class="side main-wrapper">
+                        <h1>Games</h1>
+                        <div class="kotakgames">
+                           <a href="pompa.html" class="pompaBan">Game Pompa Ban</a>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
          </div>
          <footer id="footer"></footer>
          <a href="#" class="btt" id="tbl">
